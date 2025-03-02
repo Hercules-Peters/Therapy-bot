@@ -1,0 +1,313 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="page-header min-height-300 border-radius-xl mt-4"
+    style="background-image: url('{% static 'img/curved-images/curved0.jpg' %}'); background-position-y: 50%;">
+    <span class="mask bg-gradient-primary opacity-6"></span>
+  </div>
+  <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
+    <div class="row gx-4">
+      <div class="col-auto">
+        <div class="avatar avatar-xl position-relative">
+          <img src="{% static 'img/user.png' %}" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+        </div>
+      </div>
+      <div class="col-auto my-auto">
+        <div class="h-100">
+          <h5 class="mb-1">
+            Username
+          </h5>
+          <p class="mb-0 font-weight-bold text-sm">
+            me@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12 col-xl-4">
+      <div class="card h-100">
+        <div class="card-header pb-0 p-3">
+          <div class="row">
+            <div class="col-md-8 d-flex align-items-center">
+              <h6 class="mb-0">Profile Information</h6>
+            </div>
+            <div class="col-md-4 text-end">
+              <a href="javascript:;">
+                <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top"
+                  title="Edit Profile"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-3">
+          <p class="text-sm">
+            Hi, I’m {username}, {bio}.
+          </p>
+          <hr class="horizontal gray-light my-4">
+          <ul class="list-group">
+            <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp;
+              Happy User</li>
+            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; (254)
+              123 1234 123</li>
+            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Bio:</strong> &nbsp;
+              add bio</li>
+            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; Kenya
+            </li>
+            <li class="list-group-item border-0 ps-0 pb-0">
+              <strong class="text-dark text-sm">Social:</strong> &nbsp;
+              <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                <i class="fab fa-facebook fa-lg"></i>
+              </a>
+              <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+              <a class="btn btn-instagram btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-4">
+      <div class="card h-100">
+        <div class="card-header pb-0 p-3">
+          <h6 class="mb-0">My Newsletters</h6>
+        </div>
+        <div class="card-body p-3">
+          <ul class="list-group">
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/sentiments.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Calm mind.</h6>
+                <p class="mb-0 text-xs">Ways to calm..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://greatergood.berkeley.edu/article/item/four_ways_to_calm_your_mind_in_stressful_times">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/pic1.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">High Serum Glucose..</h6>
+                <p class="mb-0 text-xs">Glucose levels have..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3543736/#:~:text=Glucose%20levels%20have%20been%20proposed,Cerami%201985%3B%20Seshasai%20et%20al.">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/sentiments.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Improve Sleep Quality</h6>
+                <p class="mb-0 text-xs">Tips to sleep better..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.healthline.com/nutrition/17-tips-to-sleep-better">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/pic1.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Self Improvement</h6>
+                <p class="mb-0 text-xs">Ideas for self growth..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.berkeleywellbeing.com/self-improvement.html">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0">
+              <div class="avatar me-3">
+                <img src="{% static 'img/pic2.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Relationship, Emotions</h6>
+                <p class="mb-0 text-xs">Emotional needs to..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.healthline.com/health/emotional-needs">check</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-4">
+      <div class="card h-100">
+        <div class="card-header pb-0 p-3">
+          <h6 class="mb-0">Blogs</h6>
+        </div>
+        <div class="card-body p-3">
+          <ul class="list-group">
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/ani1.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Talking therapy</h6>
+                <p class="mb-0 text-xs">Psychological treatments.. </p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/types-of-talking-therapies/">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/ani2.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Low confidence..</h6>
+                <p class="mb-0 text-xs">A doctor gives you tips..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://youtu.be/wN4u4tVEDZg?si=PJbaWYGq6eDsbbYw">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/ani3.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Mental health</h6>
+                <p class="mb-0 text-xs">Life, work balance..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://open.spotify.com/episode/3yVLx4uV2mA4fGeFC4u3ZP?si=vfbUSqbaSBiX24FMy1Qnaw">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+              <div class="avatar me-3">
+                <img src="{% static 'img/ani4.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Feelings, pregnancy</h6>
+                <p class="mb-0 text-xs">Pregnancy brings changes..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.nhs.uk/pregnancy/support/feelings-and-relationships/">check</a>
+            </li>
+            <li class="list-group-item border-0 d-flex align-items-center px-0">
+              <div class="avatar me-3">
+                <img src="{% static 'img/ani5.jpg' %}" alt="kal" class="border-radius-lg shadow">
+              </div>
+              <div class="d-flex align-items-start flex-column justify-content-center">
+                <h6 class="mb-0 text-sm">Sleep and tiredness</h6>
+                <p class="mb-0 text-xs">Bedtime meditation..</p>
+              </div>
+              <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto"
+                href="https://www.nhs.uk/live-well/sleep-and-tiredness/bedtime-meditation/">check</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "includes/footer.html" %}
+
+</div>
+</div>
+
+{% endblock content %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const editProfileBtn = document.querySelector('.fas.fa-user-edit');
+    const profileInfo = document.querySelector('.card-body p.text-sm');
+    const usernameElement = document.querySelector('.col-auto.my-auto h5.mb-1');
+    const emailElement = document.querySelector('.col-auto.my-auto p.mb-0');
+
+    // Function to fetch user data
+    async function fetchUserData() {
+      try {
+        const response = await fetch('/api/user-data/');
+        const userData = await response.json();
+        return userData;
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    }
+
+    // Function to update profile display
+    function updateProfileDisplay(userData) {
+      usernameElement.textContent = userData.username;
+      emailElement.textContent = userData.email;
+      profileInfo.textContent = `Hi, I'm ${userData.username}, ${userData.bio || 'No bio available.'}`;
+    }
+
+    // Fetch and display user data on page load
+    fetchUserData().then(updateProfileDisplay);
+
+    // Edit profile functionality
+    editProfileBtn.addEventListener('click', function () {
+      const currentText = profileInfo.textContent;
+      const textArea = document.createElement('textarea');
+      textArea.value = currentText;
+      textArea.classList.add('form-control');
+      profileInfo.replaceWith(textArea);
+
+      const saveBtn = document.createElement('button');
+      saveBtn.textContent = 'Save';
+      saveBtn.classList.add('btn', 'btn-primary', 'mt-2');
+      textArea.insertAdjacentElement('afterend', saveBtn);
+
+      saveBtn.addEventListener('click', async function () {
+        const newText = textArea.value;
+        try {
+          const response = await fetch('/api/update-profile/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify({ bio: newText })
+          });
+          if (response.ok) {
+            profileInfo.textContent = newText;
+            textArea.replaceWith(profileInfo);
+            saveBtn.remove();
+          } else {
+            console.error('Failed to update profile');
+          }
+        } catch (error) {
+          console.error('Error updating profile:', error);
+        }
+      });
+    });
+
+    // Modify blog links
+    const blogLinks = document.querySelectorAll('.card-body a.btn.btn-link');
+    blogLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const blogUrl = this.getAttribute('href');
+        window.location.href = blogUrl;
+      });
+    });
+
+    // Helper function to get CSRF token
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+  });
+</script>
+
+{% block scripts %}
+{% endblock scripts %}

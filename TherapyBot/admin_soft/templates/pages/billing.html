@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block extra_css %}
+<style>
+  /* Style for the map container */
+  #map {
+    height: 450px;
+    width: 100%;
+    border: 1px solid rgb(238, 239, 240);
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+  <div class="container">
+    <h6>Physical Therapy Locations</h6>
+    <!-- Map container -->
+    <div id="map"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- Include OpenLayers from a CDN -->
+<script src="https://cdn.jsdelivr.net/npm/ol@7.3.0/dist/ol.js"></script>
+<!-- Then include your custom map.js file -->
+<script src="{% static 'js/map.js' %}"></script>
+{% endblock %}

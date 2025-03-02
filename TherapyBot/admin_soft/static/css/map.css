@@ -1,0 +1,65 @@
+/* map.css */
+.container-fluid.py-4 {
+    height: calc(100vh - 56px);
+    /* Adjust based on navbar height */
+    padding: 1rem;
+    overflow: hidden;
+    /* Add overflow hidden to main container */
+}
+
+.row,
+.col-12 {
+    height: 100%;
+}
+
+.card.shadow-sm {
+    height: 70vh;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    position: relative;
+    border: 1px solid #dee2e6;
+    /* Add these properties for better containment */
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+#mapid {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 !important;
+    /* Force rectangular shape */
+    overflow: hidden !important;
+    transform: translateZ(0);
+    /* Fix for overflow issues in some browsers */
+}
+
+/* Fix for Leaflet container overflow */
+.leaflet-container {
+    overflow: hidden !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+}
+
+/* Prevent multiple world copies */
+.leaflet-tile-container img {
+    position: absolute;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+}
+
+/* Custom controls styling */
+.leaflet-control-geocoder {
+    margin-top: 75px !important;
+    margin-left: 10px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    width: 300px !important;
+}
+
+.leaflet-control-zoom {
+    margin-top: 75px !important;
+    margin-right: 10px !important;
+}
