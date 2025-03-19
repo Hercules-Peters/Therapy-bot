@@ -88,13 +88,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const thinkingIndicator = addThinkingIndicator()
 
         try {
-            const response = await fetch("/chat/", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    "X-CSRFToken": getCookie("csrftoken"),
-                },
-            })
+            // Add retry logic for network issues
+            let retries = 3;
+            let response;
+
+            while (retries > 0) {
+                try {
+                    response = await fetch("/chat/", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "X-CSRFToken": getCookie("csrftoken"),
+                        },
+                    });
+                    break; // If successful, exit the retry loop
+                } catch (networkError) {
+                    retries--;
+                    if (retries === 0) throw networkError;
+                    // Wait before retrying (exponential backoff)
+                    await new Promise(r => setTimeout(r, (3 - retries) * 1000));
+                }
+            }
 
             const data = await response.json()
 
@@ -111,12 +125,23 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error:", error)
             thinkingIndicator.remove()
-            const errorMessageDiv = createMessageElement(
-                error.message === "API quota exceeded. Please try again later."
-                    ? "The service is currently busy. Please try again in a few minutes."
-                    : "Sorry, something went wrong. Please try again.",
-                false,
-            )
+
+            // Provide more specific error messages
+            let errorMessage = "Sorry, something went wrong. Please try again.";
+
+            if (error.message === "API quota exceeded. Please try again later.") {
+                errorMessage = "The service is currently busy. Please try again in a few minutes.";
+            } else if (error.message === "Session error. Please refresh the page.") {
+                errorMessage = "Your session has expired. Please refresh the page to continue.";
+                // Optionally add auto-refresh after a delay
+                setTimeout(() => {
+                    window.location.reload();
+                }, 5000);
+            } else if (error.message.includes("Failed to fetch") || error.message.includes("NetworkError")) {
+                errorMessage = "Network connection issue. Please check your internet connection and try again.";
+            }
+
+            const errorMessageDiv = createMessageElement(errorMessage, false);
             chatBody.appendChild(errorMessageDiv)
         }
 
@@ -210,4 +235,3 @@ document.addEventListener("DOMContentLoaded", () => {
         return cookieValue
     }
 })
-

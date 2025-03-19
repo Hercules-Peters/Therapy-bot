@@ -1,0 +1,4 @@
+ERROR 2025-03-19 16:22:31,079 log Internal Server Error: /chat/
+ERROR 2025-03-19 16:22:31,081 basehttp "POST /chat/ HTTP/1.1" 500 197
+ERROR 2025-03-19 16:42:20,522 log Internal Server Error: /chat/
+ERROR 2025-03-19 16:42:20,525 basehttp "POST /chat/ HTTP/1.1" 500 145
