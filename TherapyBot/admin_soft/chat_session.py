@@ -62,7 +62,7 @@ class ChatSessionManager:
 
     def schedule_anonymous_data_deletion(self, session_id):
         try:
-            # Increase timeout from 5 seconds to 15 minutes
+            # Timeout set to 15 minutes
             timer = threading.Timer(15 * 60, self.delete_session, args=[session_id])
             timer.daemon = True  # Make thread daemon so it doesn't block app shutdown
             timer.start()

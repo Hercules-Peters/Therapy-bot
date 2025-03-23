@@ -4,7 +4,7 @@
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
   <div class="sidenav-header">
     <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-    <a class="navbar-brand m-0" href="{% url 'admin:index' %}">
+    <!--<a class="navbar-brand m-0" href="{% url 'admin:index' %}">-->
       <img src="{% static 'img/logo-ct-dark.png' %}" class="navbar-brand-img h-100" alt="main_logo">
       <span class="ms-1 font-weight-bold">Therapy Bot</span>
     </a>
@@ -80,7 +80,7 @@
     {% if request.user.is_authenticated and not request.user.is_superuser %}
 
       <li class="nav-item">
-          <a class="nav-link {% if 'tables' in segment %} active {% endif %} " href="{% url 'tables' %}">
+          <a class="nav-link {% if 'screening' in segment %} active {% endif %} " href="{% url 'screening' %}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <img src="{% static 'img/health.png' %}" width="15px" height="15px" alt="Logo">
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -99,7 +99,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if 'billing' in segment %} active {% endif %} " href="{% url 'billing' %}">
+          <a class="nav-link {% if 'location' in segment %} active {% endif %} " href="{% url 'location' %}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C8.13401 2 5 5.13401 5 9C5 13.8 10.5511 19.9195 11.2371 20.6588C11.6326 21.0897 12.3674 21.0897 12.7629 20.6588C13.4489 19.9195 19 13.8 19 9C19 5.13401 15.866 2 12 2ZM7 9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9C17 12.3721 13.3542 16.6002 12 18.132C10.6458 16.6002 7 12.3721 7 9ZM12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6ZM11 9C11 8.44772 11.4477 8 12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9Z" fill="black"/>

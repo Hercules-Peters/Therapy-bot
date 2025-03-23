@@ -6,8 +6,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('', views.index, name='index'),
     path('chat/', views.chat, name='chat'),
-    path('billing/', views.billing, name='billing'),
-    path('tables/', views.tables, name='tables'),
+    path('location/', views.location, name='location'),
+    path('screening/', views.screening, name='screening'),
     path('profile/', views.profile, name='profile'),
 
     # Sentiment Analysis
